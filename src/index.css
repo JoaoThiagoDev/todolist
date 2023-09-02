@@ -1,0 +1,264 @@
+/* Reset some default styles */
+body, h1, ul, li, p, button, input {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-family: 'Raleway', sans-serif;
+  color: #F5F5F5; /* Cor do texto atualizada */
+}
+
+body {
+  background-color: #9575DE; /* Cor de fundo atualizada */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+.container {
+  background-color: #9575DE; /* Cor de fundo atualizada */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.navbar {
+  background: linear-gradient(to top, #9575de00, #2B2730);
+  color: white; /* Cor do texto atualizada */
+  padding: 5px 0;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  cursor: initial;
+}
+
+/* ... Outras regras de estilo ... */
+
+/* ... Outras regras de estilo ... */
+
+.task-container {
+  padding-top: 5px;
+  max-height: calc(100vh - 75px);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Alinhe os itens no topo */
+}
+
+.task-input {
+  display: flex;
+  flex-direction: row; /* Alterado para linha */
+  align-items: center; /* Centralizar verticalmente */
+  margin-top: 20px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.task-input input {
+  padding: 8px;
+  outline-width: 0;
+  border-radius: 30px;
+  margin-top: 70px; /* Reduzido o espaço superior */
+  margin-bottom: 10px;
+  width: 100%;
+  max-width: 300px;
+  height: 25px;
+  transition: background-color 0.3s ease; /* Adiciona uma transição de cor suave */
+  background-color: #bc9fff; /* Cor do input atualizada */
+  color: #151d3b;
+}
+
+.task-input input:hover{
+  background-color: #d6c4ff;
+  color: white;
+}
+
+.task-input input:hover::placeholder{
+  color: #ffffff;
+}
+
+.task-input button {
+  background-color: rgba(240, 248, 255, 0);
+  color: #bc9fff;
+  border: none;
+  margin-top: 60px;
+  padding: 8px 8px;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-left: 10px; /* Espaço à esquerda do botão */
+  transition: transform 0.5s ease-in-out;
+}
+
+.task-input button:hover {
+  transform: scale(0.95);
+  animation: mudaCor 0.5s ease-in-out forwards;
+}
+
+@keyframes mudaCor{
+  0%{
+    color: #bc9fff;
+  } 100%{
+    color: #d6c4ff;
+  }
+}
+
+.input-container {
+  position: relative;
+  width: 100%;
+  max-width: 300px; /* Defina a largura máxima do input container */
+}
+
+.input-container input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  border: 0;
+  border-radius: 8px;
+  background-color: #fff; /* Cor de fundo do input */
+  text-align: center; /* Centralize o texto horizontalmente */
+}
+
+.input-container input[type="text"]::placeholder {
+  text-align: center; /* Centralize o placeholder horizontalmente */
+}
+
+/* Remova os bullets das listas */
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Alinhe o ícone de trash no fim da linha */
+
+
+/* Adicione uma classe para o ícone de lixeira */
+/* ... */
+
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  position: relative;
+}
+
+.trash-icon {
+  cursor: pointer;
+  font-size: 16px; /* Tamanho do ícone de lixeira */
+  position: absolute;
+  right: 10px; /* Ajuste a posição conforme necessário */
+  top: 50%; /* Alinhe verticalmente ao centro */
+  transform: translateY(-50%); /* Alinhe verticalmente ao centro */
+}
+
+/* ... */
+
+
+/* Alinhe o texto das linhas à esquerda absoluta */
+.task-list li,
+.completed-task {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  height: 50px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  text-align: left; /* Alinhe o texto à esquerda */
+}
+
+.completed-task span {
+  text-decoration: line-through;
+  color: #d6c4ff;
+  text-align: left; /* Alinhe o texto à esquerda */
+}
+
+/* Estilos do container de tarefas */
+.task-list {
+  width: 300px; /* Largura fixa do container */
+  /* Outros estilos do container */
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  position: relative;
+}
+
+.completed .task-text {
+  text-decoration: line-through;
+  color: #777;
+}
+
+/* Adicione essas regras CSS para as tarefas concluídas */
+.completed-task-list {
+  width: 287px; /* Largura fixa do contêiner */
+}
+
+.completed-task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  position: relative;
+}
+
+.completed-task .trash-icon {
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#noTasks{
+  font-size: 20px;
+}
+
+/* ... */
+
+.task-input input,
+.task-text,
+.completed-task span {
+  user-select: none; /* Evita a seleção de texto */
+}
+
+/* ... */
+body{
+  user-select: none;
+}
+
+/* Estilo da barra de rolagem */
+::-webkit-scrollbar {
+  width: 8px; /* Largura da barra de rolagem vertical */
+  height: 50px; /* Altura da barra de rolagem horizontal */
+}
+
+/* Cor de fundo da barra de rolagem */
+::-webkit-scrollbar-track {
+  background: #d6c4ff;
+}
+
+/* Cor da alça da barra de rolagem */
+::-webkit-scrollbar-thumb {
+  background: #bc9fff;
+  border-radius: 4px; /* Borda arredondada da alça */
+}
+
+/* Mudar a cor da alça quando passar o mouse */
+::-webkit-scrollbar-thumb:hover {
+  background: #9575DE;
+}
